@@ -1,0 +1,198 @@
+{
+  "profile": {
+    "name": "Giovanni Altieri",
+    "role": "Software Engineer",
+    "tagline": "I build backends with Java and Spring Boot: REST APIs, data modelling and enterprise applications.",
+    "about": [
+      "I'm a Software Engineer with a degree in Computer Engineering, specialised in backend development with Java and Spring Boot.",
+      "I design REST APIs and relational databases, and work with Spring Data JPA, Hibernate and PostgreSQL, using Git, Docker and Agile methods.",
+      "I'm precise, committed to continuous learning and collaboration. I enjoy tackling complex problems and helping development teams build robust, high-quality solutions."
+    ],
+    "facts": [
+      {
+        "label": "Role",
+        "value": "Software Engineer"
+      },
+      {
+        "label": "Company",
+        "value": "Teoresi Group"
+      },
+      {
+        "label": "Based in",
+        "value": "Venosa, Basilicata (Italy)"
+      },
+      {
+        "label": "Languages",
+        "value": "Italian, English (B1)"
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "role": "Software Engineer",
+      "company": "Teoresi Group",
+      "location": "Naples",
+      "start": "2025-06",
+      "end": null,
+      "activities": [
+        "Backend application development with Java and Spring Boot.",
+        "Design and implementation of REST APIs.",
+        "Domain modelling and persistence with Spring Data JPA, Hibernate and PostgreSQL.",
+        "Business logic and validation rules.",
+        "Working with Product Owners, functional analysts and frontend developers.",
+        "Git, GitLab, Docker and Swagger/OpenAPI across the development cycle.",
+        "Analysing, debugging and fixing issues in enterprise environments."
+      ],
+      "tags": [
+        "Java",
+        "Spring Boot",
+        "JPA",
+        "Hibernate",
+        "PostgreSQL",
+        "Docker",
+        "GitLab"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Languages",
+      "items": [
+        "Java",
+        "SQL",
+        "Python",
+        "HTML",
+        "CSS",
+        "JSON",
+        "XML"
+      ]
+    },
+    {
+      "category": "Frameworks and libraries",
+      "items": [
+        "Spring Boot",
+        "Spring MVC",
+        "Spring Data JPA",
+        "Hibernate",
+        "JDBC",
+        "JSP"
+      ]
+    },
+    {
+      "category": "Databases",
+      "items": [
+        "PostgreSQL",
+        "MySQL"
+      ]
+    },
+    {
+      "category": "APIs and security",
+      "items": [
+        "REST API",
+        "Swagger / OpenAPI",
+        "JWT",
+        "Keycloak",
+        "Postman"
+      ]
+    },
+    {
+      "category": "Tools and DevOps",
+      "items": [
+        "Git",
+        "GitLab",
+        "Docker",
+        "Maven",
+        "Apache Tomcat",
+        "Eclipse"
+      ]
+    },
+    {
+      "category": "Methods",
+      "items": [
+        "Agile",
+        "Requirements analysis",
+        "Data modelling"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Warranty Management Platform",
+      "sector": "Automotive",
+      "client": "Multinational client in the automotive industry",
+      "activities": [
+        "Built the Request Management module.",
+        "APIs to create and manage warranty requests.",
+        "Database modelling and JPA entities.",
+        "Workflows, business validations and application logic.",
+        "Integration with configuration data (Master Data)."
+      ],
+      "tags": [
+        "Spring Boot",
+        "JPA",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "name": "Digital Workplace Platform",
+      "sector": "Digital services",
+      "client": "Client in the digital services industry",
+      "activities": [
+        "Development and maintenance of backend services.",
+        "Evolving REST APIs and relational database integration.",
+        "Authentication and authorisation with JWT and Keycloak.",
+        "New features and bug fixing."
+      ],
+      "tags": [
+        "Spring Boot",
+        "JWT",
+        "Keycloak"
+      ]
+    },
+    {
+      "name": "Personal website",
+      "sector": "Personal project",
+      "client": "Built to learn and as a portfolio",
+      "activities": [
+        "Responsive résumé site with light and dark themes, in Italian and English.",
+        "Evolved from HTML/CSS/JavaScript to TypeScript and Angular.",
+        "Résumé data loaded over HTTP, ready for a Spring Boot backend."
+      ],
+      "tags": [
+        "Angular",
+        "TypeScript",
+        "CSS"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "title": "Bachelor's degree in Computer and Automation Engineering",
+      "institution": "eCampus University",
+      "location": "Novedrate",
+      "start": "2022-02",
+      "end": "2023-10"
+    },
+    {
+      "title": "Computer Engineering",
+      "institution": "University of Basilicata",
+      "location": "Potenza",
+      "start": "2013-10",
+      "end": "2016-01"
+    },
+    {
+      "title": "High school diploma",
+      "institution": "Liceo Quinto Orazio Flacco",
+      "location": "Venosa",
+      "start": "2008-09",
+      "end": "2013-09"
+    }
+  ],
+  "contacts": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/giovanni-altieri-a41096241/",
+      "primary": true
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+<section id="formazione" class="section" appSectionSpy aria-labelledby="formazione-title">
+  <div class="wrap">
+    <app-section-head index="05" [label]="t().sections.education.label" [title]="t().sections.education.title" titleId="formazione-title" />
+
+    <ol class="edu">
+      @for (item of items(); track item.title; let i = $index) {
+        <li class="edu__item" [appReveal]="i * 90">
+          <p class="edu__when">
+            <time [attr.datetime]="item.start">{{ item.start | date: 'yyyy' }}</time>
+            —
+            <time [attr.datetime]="item.end">{{ item.end | date: 'yyyy' }}</time>
+          </p>
+          <div>
+            <h3 class="edu__title">{{ item.title }}</h3>
+            <p class="edu__school">{{ item.institution }}</p>
+            @if (item.description) {
+              <p class="edu__text">{{ item.description }}</p>
+            }
+          </div>
+          <p class="edu__place">{{ item.location }}</p>
+        </li>
+      }
+    </ol>
+  </div>
+</section>

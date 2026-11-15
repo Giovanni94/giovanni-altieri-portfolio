@@ -1,0 +1,24 @@
+<section id="chi-sono" class="section" appSectionSpy aria-labelledby="chi-sono-title">
+  <div class="wrap">
+    <app-section-head index="01" [label]="t().sections.about.label" [title]="t().sections.about.title" titleId="chi-sono-title" />
+
+    <div class="about">
+      <p class="about__lead" [appScrollText]="lead()"></p>
+
+      <div class="about__side">
+        @for (paragraph of rest(); track $index) {
+          <p appReveal="80">{{ paragraph }}</p>
+        }
+
+        <dl class="facts" appReveal="160">
+          @for (fact of profile().facts; track fact.label) {
+            <div>
+              <dt>{{ fact.label }}</dt>
+              <dd>{{ fact.value }}</dd>
+            </div>
+          }
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>

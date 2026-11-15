@@ -1,0 +1,35 @@
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__cols">
+      <div class="footer__brand">
+        <p class="footer__mark">&#123;ga&#125;</p>
+        <p>{{ name() }}<br>{{ t().hero.label }}</p>
+      </div>
+
+      <nav [attr.aria-label]="t().footer.sections">
+        <h2 class="footer__title">{{ t().footer.sections }}</h2>
+        <ul>
+          @for (item of items; track item.id) {
+            <li><a [href]="'#' + item.id" (click)="goTo($event, item.id)">{{ t().sections[item.key].label }}</a></li>
+          }
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="footer__title">{{ t().footer.profiles }}</h2>
+        <ul>
+          @for (link of links(); track link.url) {
+            <li><a [href]="link.url" target="_blank" rel="noopener">{{ link.label }}</a></li>
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="footer__title">{{ t().footer.site }}</h2>
+        <p>{{ t().footer.siteText }}</p>
+      </div>
+    </div>
+
+    <p class="footer__bottom">© {{ year }} {{ name() }}</p>
+  </div>
+</footer>

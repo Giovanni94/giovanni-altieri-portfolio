@@ -1,0 +1,30 @@
+.skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid var(--section-line);
+  border-left: 1px solid var(--section-line);
+}
+
+@media (min-width: 640px) { .skills { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .skills { grid-template-columns: repeat(3, 1fr); } }
+
+.skill {
+  padding: 2rem 1.75rem 2.25rem;
+  border-right: 1px solid var(--section-line);
+  border-bottom: 1px solid var(--section-line);
+}
+.skill:hover { background: var(--paper-2); }
+
+.skill__name {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.35rem;
+  font-weight: 750;
+  font-variation-settings: "wdth" 106;
+  letter-spacing: -0.02em;
+  color: var(--section-ink);
+}
+.skill__name span { font-family: var(--font-mono); font-size: 0.8rem; font-weight: 500; color: var(--section-accent); }

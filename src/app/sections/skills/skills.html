@@ -1,0 +1,18 @@
+<section id="competenze" class="section" appSectionSpy aria-labelledby="competenze-title">
+  <div class="wrap">
+    <app-section-head index="03" [label]="t().sections.skills.label" [title]="t().sections.skills.title" titleId="competenze-title" />
+
+    <div class="skills">
+      @for (group of groups(); track group.category; let i = $index) {
+        <article class="skill" [appReveal]="(i % 3) * 80">
+          <h3 class="skill__name">{{ group.category }} <span>{{ group.items.length }}</span></h3>
+          <ul class="tags">
+            @for (item of group.items; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<a class="skip-link" href="#chi-sono">{{ t().skip }}</a>
+
+<app-header [contacts]="cv()?.contacts ?? []" />
+
+@if (cv(); as data) {
+  <main>
+    <app-hero [profile]="data.profile" [primaryContact]="primaryContact()" />
+    <app-marquee [items]="stack()" />
+    <app-about [profile]="data.profile" />
+    <app-experience [experiences]="data.experiences" />
+    <app-skills [groups]="data.skills" />
+    <app-projects [projects]="data.projects" />
+    <app-education [items]="data.education" />
+    <app-contact [links]="data.contacts" />
+  </main>
+  <app-footer [name]="data.profile.name" [links]="data.contacts" />
+} @else if (failed()) {
+  <p class="status">{{ t().loadError }}</p>
+} @else {
+  <p class="status">{{ t().loading }}</p>
+}

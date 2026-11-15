@@ -1,0 +1,29 @@
+.edu { list-style: none; border-top: 1px solid var(--section-line); }
+
+.edu__item {
+  display: grid;
+  gap: 0.5rem;
+  padding-block: 2rem;
+  border-bottom: 1px solid var(--section-line);
+}
+
+@media (min-width: 800px) {
+  .edu__item { grid-template-columns: 12rem 1fr auto; gap: 2rem; align-items: baseline; }
+}
+
+.edu__when, .edu__place {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--section-soft);
+}
+
+.edu__title {
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  font-weight: 750;
+  font-variation-settings: "wdth" 104;
+  letter-spacing: -0.02em;
+  color: var(--section-ink);
+}
+.edu__school { margin: 0.35rem 0 0; font-weight: 600; color: var(--section-accent); }
+.edu__text { margin: 0.75rem 0 0; max-width: 60ch; color: var(--section-soft); }

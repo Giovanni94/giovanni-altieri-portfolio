@@ -1,0 +1,21 @@
+<section id="contatti" class="section section--dark contact" appSectionSpy aria-labelledby="contatti-title">
+  <div class="wrap">
+    <p class="contact__label" appReveal><span>06</span> / {{ t().sections.contact.label }}</p>
+    <h2 id="contatti-title" class="contact__title" appReveal="80">{{ t().sections.contact.title }}<i>.</i></h2>
+
+    <div class="contact__bottom">
+      <p [appScrollText]="t().contact.text"></p>
+      <div class="contact__actions" appReveal="120">
+        @if (primary(); as link) {
+          <a class="btn btn--grad" [href]="link.url" target="_blank" rel="noopener">
+            {{ t().contact.primary }} {{ link.label }}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+        }
+        @for (link of others(); track link.url) {
+          <a class="btn btn--ghost" [href]="link.url" target="_blank" rel="noopener">{{ t().contact.profile }} {{ link.label }}</a>
+        }
+      </div>
+    </div>
+  </div>
+</section>

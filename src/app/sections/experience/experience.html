@@ -1,0 +1,39 @@
+<section id="esperienze" class="section section--dark" appSectionSpy aria-labelledby="esperienze-title">
+  <div class="wrap">
+    <app-section-head index="02" [label]="t().sections.experience.label" [title]="t().sections.experience.title" titleId="esperienze-title" />
+
+    <ol class="jobs">
+      @for (exp of experiences(); track exp.company + exp.start) {
+        <li class="job">
+          <div class="job__top" appReveal>
+            <p class="job__when">
+              <time [attr.datetime]="exp.start">{{ exp.start | date: 'MM.yyyy' }}</time>
+              —
+              @if (exp.end) {
+                <time [attr.datetime]="exp.end">{{ exp.end | date: 'MM.yyyy' }}</time>
+              } @else {
+                <span class="now">{{ t().now }}</span>
+              }
+            </p>
+            <div>
+              <h3 class="job__role">{{ exp.role }}</h3>
+              <p class="job__company">{{ exp.company }} <span>— {{ exp.location }}</span></p>
+            </div>
+          </div>
+
+          <ul class="job__points">
+            @for (activity of exp.activities; track $index; let i = $index) {
+              <li [appReveal]="(i % 2) * 90 + 40">{{ activity }}</li>
+            }
+          </ul>
+
+          <ul class="tags" [attr.aria-label]="t().technologies">
+            @for (tag of exp.tags; track tag; let i = $index) {
+              <li [appReveal]="i * 50">{{ tag }}</li>
+            }
+          </ul>
+        </li>
+      }
+    </ol>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+<section class="hero" id="top" [style.--p]="progress()">
+  <div class="hero__grid" aria-hidden="true"></div>
+
+  <div class="hero__inner wrap">
+    <p class="hero__label">
+      <span class="dot" aria-hidden="true"></span>
+      {{ t().hero.label }}
+    </p>
+
+    <h1 class="hero__title">
+      <span class="line"><span>{{ t().hero.line1 }}</span></span>
+      <span class="line"><span>{{ t().hero.line2 }} <em>{{ t().hero.highlight }}</em><i class="period">.</i></span></span>
+    </h1>
+
+    <div class="hero__bottom">
+      <p class="hero__text">{{ t().hero.intro }} {{ profile().name }}. {{ profile().tagline }}</p>
+      <div class="hero__actions">
+        <a href="#esperienze" class="btn btn--dark" (click)="goTo($event, 'esperienze')">
+          {{ t().hero.ctaExperience }}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+        </a>
+        @if (primaryContact(); as link) {
+          <a class="btn btn--outline" [href]="link.url" target="_blank" rel="noopener">
+            {{ t().hero.ctaContact }} {{ link.label }}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+        }
+      </div>
+    </div>
+
+    <p class="hero__scroll" aria-hidden="true">
+      <span>{{ t().hero.scroll }}</span>
+      <span class="hero__scroll-line"></span>
+    </p>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+<section id="progetti" class="section section--alt" appSectionSpy aria-labelledby="progetti-title">
+  <div class="wrap">
+    <app-section-head index="04" [label]="t().sections.projects.label" [title]="t().sections.projects.title" titleId="progetti-title" />
+
+    <div class="projects">
+      @for (project of projects(); track project.name; let i = $index) {
+        <div [appReveal]="i * 100">
+        <article class="project">
+          <div class="project__top">
+            <span class="project__num">P{{ i + 1 }}</span>
+            <span class="project__sector">{{ project.sector }}</span>
+          </div>
+          <h3 class="project__name">{{ project.name }}</h3>
+          <p class="project__client">{{ project.client }}</p>
+          <ul class="project__points">
+            @for (activity of project.activities; track $index) {
+              <li>{{ activity }}</li>
+            }
+          </ul>
+          <ul class="tags" [attr.aria-label]="t().technologies">
+            @for (tag of project.tags; track tag) {
+              <li>{{ tag }}</li>
+            }
+          </ul>
+        </article>
+        </div>
+      }
+    </div>
+  </div>
+</section>
